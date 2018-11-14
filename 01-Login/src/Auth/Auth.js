@@ -8,7 +8,7 @@ export default class Auth {
     clientID: AUTH_CONFIG.clientId,
     redirectUri: AUTH_CONFIG.callbackUrl,
     responseType: 'token id_token',
-    scope: 'openid'
+    scope: 'openid profile'
   });
 
   constructor() {
@@ -50,6 +50,12 @@ export default class Auth {
     localStorage.removeItem('access_token');
     localStorage.removeItem('id_token');
     localStorage.removeItem('expires_at');
+
+    // Also logout at auth0
+    this.auth0.logout({
+      returnTo: AUTH_CONFIG.logoutRedirectUrl
+    });
+
     // navigate to the home route
     history.replace('/home');
   }
