@@ -6,7 +6,7 @@ There is a [short screencast](https://www.youtube.com/watch?v=ti2zMJm34Cw) avail
 
 ## Getting Started
 
-If you haven't already done so, [sign up](https://auth0.com) for your free Auth0 account and create a new client in the [dashboard](https://manage.auth0.com). Find the **domain** and **client ID** from the settings area and add the URL for your application to the **Allowed Callback URLs** box. If you are using the server provided by the create-react-app, that URL is `http://localhost:3000/callback`.
+If you haven't already done so, [sign up](https://auth0.com) for your free Auth0 account and create a new client in the [dashboard](https://manage.auth0.com). Find the **domain** and **client ID** from the settings area and add the URL for your application to the **Allowed Callback URLs** box. If you are using the server provided by the create-react-app, that URL is `http://auth0react.azurewebsites.net/callback`.
 
 Clone the repo or download it from the React quickstart page in Auth0's documentation. Install create-react-app globally and the dependencies for the app.
 
@@ -27,7 +27,7 @@ From the Auth0 dashboard, select the APIs section and select "Create API":
 * Add a name for the API. `A friendly name for the API.`
 * Select an identifier for the endpoint. `A logical identifier for this API. We recommend using a URL but note that this doesn’t have to be a publicly available URL, Auth0 will not call your API at all. Important! This field cannot be modified.`
 
-For purposes of this demo, you may want to consider using http://localhost:3001 as your identifier.
+For purposes of this demo, you may want to consider using http://auth0react.azurewebsites.net:3001 as your identifier.
 
 You will also need to add in a new scope. `Scopes allow you to define the data that will be accessed through the applications to your API. Set a name for them and its description for better understanding.`
 
@@ -55,7 +55,7 @@ The development server that comes with create-react-app can be used to serve the
 npm start
 ```
 
-The application will be served at `http://localhost:3000`.
+The application will be served at `http://auth0react.azurewebsites.net`.
 
 ## Run the Application With Docker
 

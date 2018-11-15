@@ -1,7 +1,7 @@
 export const AUTH_CONFIG = {
   domain: 'docati.eu.auth0.com',
   clientId: 'J5iMjj2Do0Ap58YiPbx73MmD70h7r5hq',
-  callbackUrl: 'http://localhost:3000/callback',
-  logoutRedirectUrl: 'http://localhost:3000',
-  apiUrl: 'http://localhost:3001',
+  callbackUrl: 'http://auth0react.azurewebsites.net/callback',
+  logoutRedirectUrl: 'http://auth0react.azurewebsites.net',
+  apiUrl: 'http://auth0react.azurewebsites.net:3001',
 }
