@@ -84,6 +84,12 @@ export default class Auth {
     localStorage.removeItem('scopes');
     this.userProfile = null;
     clearTimeout(this.tokenRenewalTimeout);
+
+    // Also logout at auth0
+    this.auth0.logout({
+      returnTo: AUTH_CONFIG.logoutRedirectUrl
+    });
+
     // navigate to the home route
     history.replace('/home');
   }
