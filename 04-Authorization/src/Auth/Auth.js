@@ -86,6 +86,12 @@ export default class Auth {
     localStorage.removeItem('expires_at');
     localStorage.removeItem('scopes');
     this.userProfile = null;
+
+    // Also logout at auth0
+    this.auth0.logout({
+      returnTo: AUTH_CONFIG.logoutRedirectUrl
+    });
+
     // navigate to the home route
     history.replace('/home');
   }
